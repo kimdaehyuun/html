@@ -142,7 +142,37 @@
     border: none;
     margin:0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+.mid button {
+    margin: 30px 0px;
+    width: 200px;
+    height: 40px;
+    font-weight: 700;
+}
+.item {
+    width: 22%;
+    height: 210px;
+    margin: 10px;
+    background-color: aliceblue;
+}
+.profile {
+    width: 30%;
+    height: 300px;
+    border: none;
+    background-color: #c0c0c0;
+}
+.profile img {
+    margin-top: 50px;
+}
+.profile p {
+    font-size:xx-large;
+}
+.profile2 {
+    width: 70%;
+    height: 300px;
+    border: none;
+    background-color: beige;
 }
 .mid .section {
     width: 70%;
