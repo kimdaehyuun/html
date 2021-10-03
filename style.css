@@ -23,6 +23,11 @@
     width: 600px;
     height: 400px;
     background-color: aquamarine;
+    padding: 30px;
+    text-align: left;
+}
+#profile2 hr {
+    width: 100%;
 }
 .btn_container {
     width: 1024px;
@@ -35,6 +40,19 @@
 }
 .btn_container button {
     width: 200px;
+}
+.text_container {
+    width: 1024px;
+    text-align: center;
+    border: none;
+    padding: 20px 0px;
+    margin:0 auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.text_container > div {
+    padding: 0px 20px;
 }
 .item_container {
     width: 1024px;
@@ -67,6 +85,7 @@
 .item_info :last-child {
     color: red;
 }
+
 .question_container {
     width: 1024px;
     text-align: center;
@@ -111,4 +130,33 @@
     border-width: 10px;
     border-style: solid;
     border-color: transparent transparent darkgray transparent;
+}
+.deliver_container {
+    width: 1024px;
+    text-align: center;
+    border: none;
+    padding: 20px 0px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.deliver1 {
+    width: 50%;
+}
+.deliver2 {
+    width: 50%;
+}
+.deliver_list {
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 20px 0px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+.del_list2 {
+    width: 50%;
 }
