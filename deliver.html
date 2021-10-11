@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <select id = "opt_deliver">
+        <option value selected = "selected" disabled="disabled">택배사</option>
+        <option value="de.dhl">DHL</option>
+        <option value="jp.sagawa">Sagawa</option>
+        <option value="kr.cupost">CU 편의점택배</option>
+    </select>
+    <input type="number" id="opt_deli_num" placeholder="송장번호" value="111111111111" class="input">
+    <button type="button" onclick="getItem()">데이터가져오기</button>
+    <div id="deli_complete"></div>
+    <a id="result" href = "#">배송지 조회</a>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        function getItem() {
+            var deli_com = $("#opt_deliver option:selected").val();
+            var deli_num = $("#opt_deli_num").val();
+            var deli_url = 'https://tracker.delivery/#/' + deli_com + '/' + deli_num;
+            // var deli_url = 'https://apis.tracker.delivery/carriers/' + deli_com + '/tracks/' + deli_num;
+            document.getElementById('deli_complete').innerText = deli_url;
+            document.getElementById('result').setAttribute('href', deli_url);
+        }
+    </script>
+</body>
+
+</html>

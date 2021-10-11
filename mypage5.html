@@ -76,82 +76,224 @@
   </div>
   <div class = "deliver_container">
     <div class = "deliver1">
-      <span class="badge bg-success">수취 내역</span>
-      <div class = "deliver_list">
-        <div class = "del_list1">
-          <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+      <div class="badge_deliver">
+        <span class="badge bg-success" >판매 내역</span>
+      </div>
+      <div class = "deliver_list_whole">
+        <div class = "deliver_list">
+          <div class = "del_list1">
+            <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+          </div>
+          <div class = "del_list2">
+            <p>미즈노 드라이버<br>
+            풀세트/남성용/오른손용</p>
+          </div>
+          <div class = "del_list3">
+            <!-- 여기는 db값을 받아와서 innerText을 이용해 거래상태 값 입력 -->
+            <span class="badge bg-success" >거래 상태</span>
+          </div>
         </div>
-        <div class = "del_list2">
-          <p>미즈노 드라이버<br>
-          풀세트/남성용/오른손용</p>
+        <div class="deliver_list">
+          <select id = "opt_deliver">
+            <option value selected = "selected" disabled="disabled">택배사</option>
+            <option value="de.dhl">DHL</option>
+            <option value="jp.sagawa">Sagawa</option>
+            <option value="kr.cupost">CU 편의점택배</option>
+          </select>
+        <input type="number" id="opt_deli_num" placeholder="송장번호" value="111111111111" class="input">
+        <button type="button" class="btn btn-secondary" onclick="sendItem()">배송정보 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
-        <div class = "del_list3">
-          <button type="button" class="btn btn-secondary" onclick="location.href = '#'">배송조회</button>
+  
+        <div class="deliver_list">
+          <select id = "opt_deliver_state">
+            <option value="sell" selected>판매중</option>
+            <option value="selling">거래 진행중</option>
+            <option value="sold">거래 완료</option>
+          </select>
+        <button type="button" class="btn btn-secondary" onclick="sendItemState()">거래상태 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
       </div>
-      <div class = "deliver_list">
-        <div class = "del_list1">
-          <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+      <div class = "deliver_list_whole">
+        <div class = "deliver_list">
+          <div class = "del_list1">
+            <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+          </div>
+          <div class = "del_list2">
+            <p>미즈노 드라이버<br>
+            풀세트/남성용/오른손용</p>
+          </div>
+          <div class = "del_list3">
+            <!-- 여기는 db값을 받아와서 innerText을 이용해 거래상태 값 입력 -->
+            <span class="badge bg-success" >거래 상태</span>
+          </div>
         </div>
-        <div class = "del_list2">
-          <p>미즈노 드라이버<br>
-          풀세트/남성용/오른손용</p>
+        <div class="deliver_list">
+          <select id = "opt_deliver">
+            <option value selected = "selected" disabled="disabled">택배사</option>
+            <option value="de.dhl">DHL</option>
+            <option value="jp.sagawa">Sagawa</option>
+            <option value="kr.cupost">CU 편의점택배</option>
+          </select>
+        <input type="number" id="opt_deli_num" placeholder="송장번호" value="111111111111" class="input">
+        <button type="button" class="btn btn-secondary" onclick="sendItem()">배송정보 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
-        <div class = "del_list3">
-          <button type="button" class="btn btn-secondary" onclick="location.href = '#'">배송조회</button>
+  
+        <div class="deliver_list">
+          <select id = "opt_deliver_state">
+            <option value="sell" selected>판매중</option>
+            <option value="selling">거래 진행중</option>
+            <option value="sold">거래 완료</option>
+          </select>
+        <button type="button" class="btn btn-secondary" onclick="sendItemState()">거래상태 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
       </div>
-      <div class = "deliver_list">
-        <div class = "del_list1">
-          <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+      <div class = "deliver_list_whole">
+        <div class = "deliver_list">
+          <div class = "del_list1">
+            <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+          </div>
+          <div class = "del_list2">
+            <p>미즈노 드라이버<br>
+            풀세트/남성용/오른손용</p>
+          </div>
+          <div class = "del_list3">
+            <!-- 여기는 db값을 받아와서 innerText을 이용해 거래상태 값 입력 -->
+            <span class="badge bg-success" >거래 상태</span>
+          </div>
         </div>
-        <div class = "del_list2">
-          <p>미즈노 드라이버<br>
-          풀세트/남성용/오른손용</p>
+        <div class="deliver_list">
+          <select id = "opt_deliver">
+            <option value selected = "selected" disabled="disabled">택배사</option>
+            <option value="de.dhl">DHL</option>
+            <option value="jp.sagawa">Sagawa</option>
+            <option value="kr.cupost">CU 편의점택배</option>
+          </select>
+        <input type="number" id="opt_deli_num" placeholder="송장번호" value="111111111111" class="input">
+        <button type="button" class="btn btn-secondary" onclick="sendItem()">배송정보 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
-        <div class = "del_list3">
-          <button type="button" class="btn btn-secondary" onclick="location.href = '#'">배송조회</button>
+  
+        <div class="deliver_list">
+          <select id = "opt_deliver_state">
+            <option value="sell" selected>판매중</option>
+            <option value="selling">거래 진행중</option>
+            <option value="sold">거래 완료</option>
+          </select>
+        <button type="button" class="btn btn-secondary" onclick="sendItemState()">거래상태 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
       </div>
+      
     </div>
     <div class = "deliver2">
-      <span class="badge bg-info">발신 내역</span>
-      <div class = "deliver_list">
-        <div class = "del_list1">
-          <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
-        </div>
-        <div class = "del_list2">
-          <p>미즈노 드라이버<br>
+      <div class="badge_deliver">
+        <span class="badge bg-info" >구매 내역</span>
+      </div>
+      <div class = "deliver_list_whole">
+        <div class = "deliver_list">
+          <div class = "del_list1">
+            <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+          </div>
+          <div class = "del_list2">
+            <p>미즈노 드라이버<br>
             풀세트/남성용/오른손용</p>
+          </div>
+          <div class = "del_list3">
+            <!-- 여기는 db값을 받아와서 innerText을 이용해 거래상태 값 입력 -->
+            <span class="badge bg-info" >거래 상태</span>
+          </div>
         </div>
-        <div class = "del_list3">
-          <button type="button" class="btn btn-secondary" onclick="location.href = '#'">배송조회</button>
+        <div class="deli_list_right">
+          <button type="button" class="btn btn-secondary" onclick="getItem()">배송정보 조회</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
-      </div>
-      <div class = "deliver_list">
-        <div class = "del_list1">
-          <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
-        </div>
-        <div class = "del_list2">
-          <p>미즈노 드라이버<br>
-          풀세트/남성용/오른손용</p>
-        </div>
-        <div class = "del_list3">
-          <button type="button" class="btn btn-secondary" onclick="location.href = '#'">배송조회</button>
-        </div>
-      </div>
-      <div class = "deliver_list">
-        <div class = "del_list1">
-          <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
-        </div>
-        <div class = "del_list2">
-          <p>미즈노 드라이버<br>
-          풀세트/남성용/오른손용</p>
-        </div>
-        <div class = "del_list3">
-          <button type="button" class="btn btn-secondary" onclick="location.href = '#'">배송조회</button>
+  
+        <div class="deliver_list">
+          <select id = "opt_deliver_state">
+            <option value="sell" selected>판매중</option>
+            <option value="selling">거래 진행중</option>
+            <option value="sold">거래 완료</option>
+          </select>
+        <button type="button" class="btn btn-secondary" onclick="sendItemState()">거래상태 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
         </div>
       </div>
+      <div class = "deliver_list_whole">
+        <div class = "deliver_list">
+          <div class = "del_list1">
+            <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+          </div>
+          <div class = "del_list2">
+            <p>미즈노 드라이버<br>
+            풀세트/남성용/오른손용</p>
+          </div>
+          <div class = "del_list3">
+            <!-- 여기는 db값을 받아와서 innerText을 이용해 거래상태 값 입력 -->
+            <span class="badge bg-info" >거래 상태</span>
+          </div>
+        </div>
+        <div class="deli_list_right">
+          <button type="button" class="btn btn-secondary" onclick="getItem()">배송정보 조회</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
+        </div>
+  
+        <div class="deliver_list">
+          <select id = "opt_deliver_state">
+            <option value="sell" selected>판매중</option>
+            <option value="selling">거래 진행중</option>
+            <option value="sold">거래 완료</option>
+          </select>
+        <button type="button" class="btn btn-secondary" onclick="sendItemState()">거래상태 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
+        </div>
+      </div>
+      <div class = "deliver_list_whole">
+        <div class = "deliver_list">
+          <div class = "del_list1">
+            <img src="2.png" class="rounded" alt="Cinque Terre" width="100em" height="100em">
+          </div>
+          <div class = "del_list2">
+            <p>미즈노 드라이버<br>
+            풀세트/남성용/오른손용</p>
+          </div>
+          <div class = "del_list3">
+            <!-- 여기는 db값을 받아와서 innerText을 이용해 거래상태 값 입력 -->
+            <span class="badge bg-info" >거래 상태</span>
+          </div>
+        </div>
+        <div class="deli_list_right">
+          <button type="button" class="btn btn-secondary" onclick="getItem()">배송정보 조회</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
+        </div>
+  
+        <div class="deliver_list">
+          <select id = "opt_deliver_state">
+            <option value="sell" selected>판매중</option>
+            <option value="selling">거래 진행중</option>
+            <option value="sold">거래 완료</option>
+          </select>
+        <button type="button" class="btn btn-secondary" onclick="sendItemState()">거래상태 등록</button>
+        <!-- <div id="deli_complete"></div>
+        <a id="result" href = "#">배송지 조회</a> -->
+        </div>
+      </div>
+      
+      
     </div>
   </div>
     <div class="container">
@@ -201,5 +343,20 @@
         </div>
       </footer>
     </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        function sendItem() {
+            var deli_com = $("#opt_deliver option:selected").val();
+            var deli_num = $("#opt_deli_num").val();
+            // var deli_url = 'https://tracker.delivery/#/' + deli_com + '/' + deli_num;
+            // var deli_url = 'https://apis.tracker.delivery/carriers/' + deli_com + '/tracks/' + deli_num;
+            // document.getElementById('deli_complete').innerText = deli_url;
+            // document.getElementById('result').setAttribute('href', deli_url);
+        }
+        // 버튼을 누르면 거래상태 값이 디비로 전송됨
+        function sendItemState() {
+            var deli_state = $("#opt_deliver_state option:selected").val();
+        }
+    </script>
 </body>
 </html>
